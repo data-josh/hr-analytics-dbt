@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    database: hr-analytics-portfolio-495323
+    schema: raw
+    tables:
+      - name: ukg_employees
+      - name: ukg_employment_history
+      - name: ukg_compensation
+      - name: ukg_time_off
+      - name: icims_jobs
+      - name: icims_applications
+      - name: lattice_reviews
