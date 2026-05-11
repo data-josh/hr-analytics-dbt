@@ -1,0 +1,106 @@
+version: 2
+
+models:
+  - name: stg_ukg_employees
+    description: "Cleaned and standardized employee records from UKG Pro HRIS. One row per employee."
+    columns:
+      - name: employee_id
+        description: "Primary key. Unique identifier for each employee."
+        tests:
+          - unique
+          - not_null
+      - name: work_email
+        description: "Standardized lowercase work email."
+        tests:
+          - not_null
+      - name: status
+        description: "Current employment status."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Active', 'Terminated']
+
+  - name: stg_ukg_employment_history
+    description: "Job change events from UKG Pro. One row per event per employee."
+    columns:
+      - name: history_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Foreign key to stg_ukg_employees."
+        tests:
+          - not_null
+      - name: event_type
+        description: "Type of employment event."
+        tests:
+          - not_null
+
+  - name: stg_ukg_compensation
+    description: "Salary history from UKG Pro. One row per compensation change per employee."
+    columns:
+      - name: compensation_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Foreign key to stg_ukg_employees."
+        tests:
+          - not_null
+      - name: annual_salary
+        description: "Annual salary in local currency. Cast to float64 from raw string."
+
+  - name: stg_ukg_time_off
+    description: "Time off requests from UKG Pro. One row per request."
+    columns:
+      - name: request_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Foreign key to stg_ukg_employees."
+        tests:
+          - not_null
+
+  - name: stg_icims_jobs
+    description: "Job requisitions from iCIMS ATS. One row per job posting."
+    columns:
+      - name: job_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: status
+        description: "Current status of the job requisition."
+        tests:
+          - not_null
+
+  - name: stg_icims_applications
+    description: "Candidate applications from iCIMS ATS. One row per application."
+    columns:
+      - name: application_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: job_id
+        description: "Foreign key to stg_icims_jobs. Some orphaned records expected."
+        tests:
+          - not_null
+
+  - name: stg_lattice_reviews
+    description: "Performance reviews from Lattice. One row per review per employee per cycle."
+    columns:
+      - name: review_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Foreign key to stg_ukg_employees."
+        tests:
+          - not_null
