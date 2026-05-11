@@ -13,6 +13,7 @@ select
     e.annual_salary,
     e.comp_currency,
     e.avg_performance_score,
+    {{ fiscal_quarter('a.termination_date') }}  as termination_quarter,
     round(a.tenure_years, 1)                as tenure_years_rounded,
     case
         when a.tenure_years < 1 then 'Under 1 year'
