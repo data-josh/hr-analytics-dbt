@@ -1,3 +1,5 @@
+-- mart_headcount: monthly headcount snapshot by department, level, country
+
 {{
     config(
         materialized='incremental',
