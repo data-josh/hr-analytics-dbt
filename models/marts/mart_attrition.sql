@@ -1,3 +1,5 @@
+-- mart_attrition: final attrition table joining employee history, tenure, and enriched compensation data
+
 select
     a.employee_id,
     a.full_name_clean,
