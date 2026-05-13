@@ -1,1 +1,1 @@
-# hr-analytics-dbt
+# HR Analytics dbt Project
