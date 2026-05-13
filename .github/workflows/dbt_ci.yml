@@ -44,4 +44,4 @@ jobs:
           EOF
 
       - name: Run dbt build
-        run: dbt build --project-dir hr_analytics
+        run: dbt build
