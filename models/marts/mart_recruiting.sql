@@ -1,3 +1,5 @@
+-- mart_recruiting: recruiting funnel metrics by job, department, and source
+
 select
     job_id,
     job_title,
