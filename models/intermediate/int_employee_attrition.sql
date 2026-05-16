@@ -50,7 +50,7 @@ final as (
 
     from employees e
     left join terminations t on e.employee_id = t.employee_id
-
+    where e.status = 'Terminated'
 )
 
 select * from final
