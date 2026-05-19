@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: mart_headcount
+    description: "Monthly headcount snapshot by department, job level, and country."
+    columns:
+      - name: snapshot_month_dept_key
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: department
+        description: "Normalized department name."
+        tests:
+          - not_null
+      - name: snapshot_month
+        description: "Month of the headcount snapshot."
+        tests:
+          - not_null
+
+  - name: mart_attrition
+    description: "Terminated employee records with attrition type and tenure bands."
+    columns:
+      - name: employee_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+      - name: attrition_type
+        description: "Voluntary, Involuntary, or Unknown."
+        tests:
+          - not_null
+
+  - name: mart_recruiting
+    description: "Recruiting funnel metrics by job posting."
+    columns:
+      - name: job_id
+        description: "Primary key."
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_comp_equity
+    description: "Employee compensation with compa-ratio against job level median."
+    columns:
+      - name: employee_id
+        description: "Primary key."
+        tests:
+          - not_null
+      - name: compa_ratio
+        description: "Employee salary divided by job level median. 1.0 = at median."
+        tests:
+          - not_null

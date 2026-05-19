@@ -25,7 +25,8 @@ with source as (
             cast(snapshot_month as string), '_',
             coalesce(department, 'unknown'), '_',
             coalesce(job_level, 'unknown'), '_',
-            coalesce(country, 'unknown')
+            coalesce(country, 'unknown'), '_',
+            coalesce(employment_type, 'unknown')
         ) as snapshot_month_dept_key
 
     from {{ ref('int_headcount_daily') }}

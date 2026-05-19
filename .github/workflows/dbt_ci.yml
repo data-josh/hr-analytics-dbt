@@ -37,11 +37,11 @@ jobs:
                 type: bigquery
                 method: service-account-json
                 project: hr-analytics-portfolio-495323
-                dataset: dev
+                dataset: dbt_datajosh
                 threads: 4
                 location: US
                 keyfile_json: ${{ secrets.GCP_SA_KEY }}
           EOF
 
       - name: Run dbt build
-        run: dbt build --profiles-dir ~/.dbt
+        run: dbt build --full-refresh --profiles-dir ~/.dbt
