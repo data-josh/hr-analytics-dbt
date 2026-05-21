@@ -24,6 +24,9 @@ raw layer (BigQuery — source CSVs)
             → mart layer (mart_* — analytics-ready tables)
 ```
 
+![Data Model](data_model.png)
+
+
 ### Marts
 
 | Mart | Business Question | Key Metrics |
