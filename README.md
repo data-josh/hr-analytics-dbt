@@ -104,6 +104,10 @@ Live Looker Studio dashboard connected to BigQuery marts:
 
 ---
 
+**dbt Documentation:** [View Data Lineage & Model Docs](https://data-josh.github.io/hr-analytics-dbt/)
+
+---
+
 ## Author
 
 Josh — USMC veteran · HR Data Analyst II · Analytics Engineering portfolio project  
