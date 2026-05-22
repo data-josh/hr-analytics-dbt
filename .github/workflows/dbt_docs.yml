@@ -1,0 +1,54 @@
+name: Deploy dbt Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-bigquery
+
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          default:
+            target: dev
+            outputs:
+              dev:
+                type: bigquery
+                method: service-account-json
+                project: hr-analytics-portfolio-495323
+                dataset: dbt_datajosh
+                threads: 4
+                location: US
+                keyfile_json: ${{ secrets.GCP_SA_KEY }}
+          EOF
+
+      - name: Generate dbt docs
+        run: |
+          dbt deps --profiles-dir ~/.dbt
+          dbt compile --write-catalog --profiles-dir ~/.dbt
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target
