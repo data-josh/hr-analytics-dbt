@@ -45,7 +45,7 @@ jobs:
       - name: Generate dbt docs
         run: |
           dbt deps --profiles-dir ~/.dbt
-          dbt compile --write-catalog --profiles-dir ~/.dbt
+          dbt docs generate --profiles-dir ~/.dbt
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
