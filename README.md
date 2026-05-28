@@ -92,8 +92,10 @@ All issues are handled in the staging layer so downstream models start from a cl
 
 ## Dashboard
 
+
 Live Looker Studio dashboard connected to BigQuery marts:  
 [View Dashboard](https://datastudio.google.com/s/saLR98d7tcg)
+
 
 - Active headcount over time
 - Headcount by department (current snapshot)
@@ -102,7 +104,9 @@ Live Looker Studio dashboard connected to BigQuery marts:
 - Applications by department
 - Average salary by job level
 
+
 ![Dashboard](dashboard_image.png)
+
 
 ---
 
