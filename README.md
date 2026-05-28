@@ -102,7 +102,7 @@ Live Looker Studio dashboard connected to BigQuery marts:
 - Applications by department
 - Average salary by job level
 
-![Dashboard](assets/dashboard_image.png)
+![Dashboard](dashboard_image.png)
 
 ---
 
