@@ -102,6 +102,8 @@ Live Looker Studio dashboard connected to BigQuery marts:
 - Applications by department
 - Average salary by job level
 
+![Dashboard](assets/dashboard_image.png)
+
 ---
 
 **dbt Documentation:** [View Data Lineage & Model Docs](https://data-josh.github.io/hr-analytics-dbt/)
