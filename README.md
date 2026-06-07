@@ -1,8 +1,9 @@
 # HR Analytics dbt Project
 
-A production-grade Analytics Engineering portfolio project modeling a multi-country HR dataset across four analytics domains: headcount, attrition, recruiting, and compensation equity.
+I built this because I spent 6 months working with HR data and seeing the challenges we faced in consolidating our data for faster and more reliable analyis. This project is the data foundation I wish we'd had — a production-grade dbt pipeline modeling real HR system exports (UKG Pro, iCIMS) into analytics-ready marts for headcount, attrition, recruiting, and comp equity.
 
-Built to mirror the internal people analytics problems faced by globally distributed companies like Deel, Remote.com, and GitLab.
+Built to mirror the internal people analytics problems faced by globally 
+distributed companies like Deel, Remote.com, and GitLab.
 
 ---
 
@@ -118,3 +119,9 @@ Live Looker Studio dashboard connected to BigQuery marts:
 
 Josh — USMC veteran · HR Data Analyst II · Analytics Engineering portfolio project  
 [LinkedIn](https://linkedin.com/in/joshua-lao) · [GitHub](https://github.com/data-josh)
+
+
+## Background
+
+Prior to this project, I spent 1.5 years as a Management Analyst at the Department of Veterans Affairs doing financial and workforce reporting, and currently working at ENFRA as an HR Data Aanlyst II using UKG Pro and iCIMS data. This project 
+is built on that domain knowledge.
