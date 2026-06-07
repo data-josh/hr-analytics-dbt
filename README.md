@@ -1,6 +1,6 @@
 # HR Analytics dbt Project
 
-I built this because I spent 6 months working with HR data and seeing the challenges we faced in consolidating our data for faster and more reliable analyis. This project is the data foundation I wish we'd had — a production-grade dbt pipeline modeling real HR system exports (UKG Pro, iCIMS) into analytics-ready marts for headcount, attrition, recruiting, and comp equity.
+I built this because I spent 6 months working with HR data and seeing the challenges we faced in consolidating our data for faster and more reliable analysis. This project is the data foundation I wish we'd had — a production-grade dbt pipeline modeling real HR system exports (UKG Pro, iCIMS) into analytics-ready marts for headcount, attrition, recruiting, and comp equity.
 
 Built to mirror the internal people analytics problems faced by globally 
 distributed companies like Deel, Remote.com, and GitLab.
