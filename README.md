@@ -123,5 +123,4 @@ Josh — USMC veteran · HR Data Analyst II · Analytics Engineering portfolio p
 
 ## Background
 
-Prior to this project, I spent 1.5 years as a Management Analyst at the Department of Veterans Affairs doing financial and workforce reporting, and currently working at ENFRA as an HR Data Aanlyst II using UKG Pro and iCIMS data. This project 
-is built on that domain knowledge.
+Prior to this project, I spent 1.5 years as a Management Analyst at the Department of Veterans Affairs doing financial and workforce reporting, and currently working at ENFRA as an HR Data Analyst II using UKG Pro and iCIMS data. This project is built on that domain knowledge — I understand what these tables mean operationally, not just technically.
