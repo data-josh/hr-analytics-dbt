@@ -95,7 +95,7 @@ All issues are handled in the staging layer so downstream models start from a cl
 
 
 Live Looker Studio dashboard connected to BigQuery marts:  
-[View Dashboard]([https://datastudio.google.com/reporting/f0174720-98ef-4746-8de4-824322929326/page/uxHyF])
+[View Dashboard](https://datastudio.google.com/reporting/f0174720-98ef-4746-8de4-824322929326/page/uxHyF)
 
 
 - Active headcount over time
